@@ -1,1 +1,1 @@
-# Repository pour le cours de CPOO IETCPS Charleroi
+# Repository course of CPOO IETCPS Charleroi
