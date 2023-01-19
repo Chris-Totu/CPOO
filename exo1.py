@@ -11,9 +11,10 @@ Programme qui demande à l'utilisateur son nom, son prénom et son âge et lui a
 19 -> 34 ans: Senior,
 35 -> 99 ans: Veteran.
 
++ tester 50 fois cette fonction
 """
 
-import random 
+import random
 
 
 # # Premiere version
@@ -65,21 +66,31 @@ def getAgeUser():
 
         except ValueError:
             print('Votre age n\'est pas un nombre valide !\n')
-         
+
+
+# Obtention du nom de l'utilisateur
+def getName():
+    return input('Entrez votre nom : ')
+
+
+# Obtention du prénom de l'utilisateur
+def getFirstName():
+    return input('Entrez votre prénom : ')
+
+
+# Affichage nom + prenom et catégorie de la personne
+def diplayPersonne(name, fistName, age):
+    print(f'{name} {firstName}, à {age} ans, vous etes \'{categoryAge(age)}\'.')
+
 
 #Tester la fonction categoryAge() 50 fois :
-i = 0
-while i < 50:
-    age = random.randint(0, 100)
+print('TEST FONCTION categroyAge() 50x :\n')
+for i in range(50):
+    age = random.randint(9, 99)
     print(f'A {age} an(s), vous etes : {categoryAge(age)}')
 
-    i += 1
 
-print('\n----------------------------------\n')
-
-
-name = input('Entrez votre nom : ')
-firstName = input('Entrez votre prénom : ')
+name = getName()
+firstName = getFirstName()
 age = getAgeUser()
-
-print(f'{name} {firstName}, à {age} ans, vous etes \'{categoryAge(age)}\'.')
+diplayPersonne(name, firstName, age)
