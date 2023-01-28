@@ -16,7 +16,6 @@ Programme qui demande à l'utilisateur son nom, son prénom et son âge et lui a
 
 import random
 
-
 # # Premiere version
 # def categoryAge(age):
 #     if age >= 9 and age < 11:
@@ -37,7 +36,7 @@ import random
 #         return "Aucune catégorie pour votre age."
 
 
-# Deuxieme version plus optimisée ?
+# Deuxieme version ??plus optimisée??
 def categoryAge(age):
     categories = {
         (9, 10): 'Poussin',
@@ -79,7 +78,7 @@ def getFirstName():
 
 
 # Affichage nom + prenom et catégorie de la personne
-def diplayPersonne(name, fistName, age):
+def diplayPersonne(name, firstName, age):
     print(f'{name} {firstName}, à {age} ans, vous etes \'{categoryAge(age)}\'.')
 
 
