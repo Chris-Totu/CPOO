@@ -10,6 +10,7 @@ def isPeer():
     else:
         print(f'Le nombre {nbr} est impair.')
         
+
 ## Ex 2 ##
 # Programme qui demande à l'utilisateur deux nombres, fait la somme et divise par 2
 def addDivision():
@@ -23,13 +24,13 @@ def addDivision():
         print(f'({nbr1} + {nbr2}) /2 = {total/2}')
 
 
-
 ## Ex 3 ##
 # Programme qui prend un mot en entrée et qui va renvoyer le nombre de lettres de ce mot
 def nbrLettresWord(word):
     nbrLettres = len(word)
     
     return nbrLettres
+
 
 ## Ex 4 ##
 # Programme qui va aléatoirement tirer un nombre et qui va demander à l'utilisateur de deviner ce nombre.
@@ -47,8 +48,6 @@ def findNbr():
         print(f'Féliciation, vous avez trouvé le bon nombre en {nbrAttempts} !')
     else:
         print(f'Raté, le nombre à trouver était {randNbr}')
-
-            
 
 
 ## Ex 5 ##
@@ -90,6 +89,7 @@ def main():
 
     print("Exo5:\n---")
     findNbrMoreLess()
+
 
 if __name__ == "__main__":
     main()
