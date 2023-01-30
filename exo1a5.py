@@ -3,39 +3,35 @@ import random
 ## Ex 1 ##
 # Programme qui demande à l'utilisateur un nombre et qui dit à l'utilisateur si le nombre est pair ou impair
 #
-def isPeer():
-    nbr = int(input('Entrez un nombre : '))
-    if(nbr % 2 == 0):
-        print(f'Le nombre {nbr} est pair.')
+def check_even_odd():
+    nbr = int(input("Entrez un nombre : "))
+    if nbr % 2 == 0:
+        print(f"Le nombre {nbr} est pair.")
     else:
-        print(f'Le nombre {nbr} est impair.')
-        
+        print(f"Le nombre {nbr} est impair.")
 
 ## Ex 2 ##
-# Programme qui demande à l'utilisateur deux nombres, fait la somme et divise par 2
-def addDivision():
+# Programme qui demande à l'utilisateur deux nombres, fait la somme et divise par 2 (en fait 0/2 ca fait 0 donc balek d'une verif)
+def avg_division():
     nbr1 = int(input('Entrez premier nombre : '))
     nbr2 = int(input('Entrez second nombre : '))
 
-    total = nbr1 + nbr2
-    if(total == 0):
-        print('Impossible de diviser 0 par 2')
-    else:
-        print(f'({nbr1} + {nbr2}) /2 = {total/2}')
+    total = (nbr1 + nbr2) / 2
+    print(f'({nbr1} + {nbr2}) /2 = {total/2}')
 
 
 ## Ex 3 ##
 # Programme qui prend un mot en entrée et qui va renvoyer le nombre de lettres de ce mot
-def nbrLettresWord(word):
-    nbrLettres = len(word)
+def nbr_letters_word(word):
+    nbrLetters = len(word)
     
-    return nbrLettres
+    return nbrLetters
 
 
 ## Ex 4 ##
 # Programme qui va aléatoirement tirer un nombre et qui va demander à l'utilisateur de deviner ce nombre.
 # L'utilisateur a 10 tentatives pour trouver.
-def findNbr():
+def find_nbr():
     nbrAttempts = 1
     randNbr = random.randint(9, 99)
     userNbr = int(input('Entrez nombre : '))
@@ -52,7 +48,7 @@ def findNbr():
 
 ## Ex 5 ##
 # Programme qui va aléatoirement tirer un nombre et qui va demander à l'utilisateur de deviner ce nombre + dire si c'est plus ou moins.
-def findNbrMoreLess():
+def find_nbr_more_less():
     nbrAttempts = 1
     randNbr = random.randint(9, 99)
     userNbr = int(input('Entrez nombre : '))
@@ -74,21 +70,19 @@ def findNbrMoreLess():
 
 def main():
     print("Exo1:\n---")
-    isPeer()
+    check_even_odd()
     
     print("Exo2:\n---")
-    addDivision()
+    avg_division()
     
     print("Exo3:\n---")
-    word = 'cancrelat.'
-    nbrLetters = nbrLettresWord(word)
-    print(f"Dans '{word}' il y'a {nbrLetters} lettre(s)")
+    print("Dans 'cancrelat' il y'a {} lettre(s)".format(nbr_letters_word('cancrelat')))
 
     print("Exo4:\n---")
-    findNbr()
+    find_nbr()
 
     print("Exo5:\n---")
-    findNbrMoreLess()
+    find_nbr_more_less()
 
 
 if __name__ == "__main__":
