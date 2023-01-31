@@ -1,6 +1,6 @@
 <h1 align="center">Repository course of C.P.O.O. IETCPS Charleroi</h1>
 
-<h3> Hi 👋, I'm Chris, I share here the exercises (for my classmates mainly) of the course Object Oriented Programming in Ppython.</h3>
+<h3> Hi 👋, I'm Chris, I share here the exercises (for my classmates mainly) of the course Object Oriented Programming in Python.</h3>
 <p align="center"> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
 
 - [ ] **These are exercises for first year students in IT, it is not very complex.** 
