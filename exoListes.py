@@ -1,7 +1,6 @@
 ## Programme qui échange les valeurs du premier avec le dernier élément de la liste.
 def swap_list(list):
-    lenList = len(list) - 1
-    list[0], list[lenList] = list[lenList], list[0]
+    list[0], list[-1] = list[-1], list[0]
     return list
 
 
@@ -49,6 +48,7 @@ def check_number_v2(n):
 def last_exercise():
     ## Soit la liste suivante :
     L = [ 987, 65, 43, 21, 43, 98, 145 ]
+    
     # • Afficher la liste L
     print(L)
     
