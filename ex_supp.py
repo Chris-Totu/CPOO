@@ -38,7 +38,7 @@ def salaire_par_ville(liste_employes, liste_villes, dict_taux_change):
             elif ville == 'Shanghai':
                 taux = dict_taux_change['CNY']
     
-            salaire_ville[ville] = salaire_ville[ville] * taux
+            salaire_ville[ville] *= taux
         
         return salaire_ville
 
