@@ -60,7 +60,7 @@ def employes_par_societe(liste_employes):
             employes_societes[societe][0] += 1              #       Ajouter une personne dans la société
             employes_societes[societe][1].append(pays)      #       Ajouter le pays de la société
         else:                                               # Sinon :
-                employes_societes[societe][0] += 1          #       Ajouter une personne dans la société
+            employes_societes[societe][0] += 1              #       Ajouter une personne dans la société
 
     return employes_societes
 
