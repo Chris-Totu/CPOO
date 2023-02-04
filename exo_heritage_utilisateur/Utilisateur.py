@@ -1,7 +1,6 @@
-# Listes de projets || 'pr_' -> projet privé, non accessible au junior
-projets = ["pr_GameOfThrones", "HarryPotter", "pr_Avengers"]
+from projets import projets
 
-class Utilisateur:
+class Senior:
     def __init__(self, nom, prenom):
         self.nom = nom
         self.prenom = prenom
@@ -13,9 +12,9 @@ class Utilisateur:
     def __str__(self):
         return f"Utilisateur {self.nom} {self.prenom}"
 
-
+        
 #Classe fille de Utilisateur
-class Junior(Utilisateur):
+class Junior(Senior):
     def __init__(self, nom, prenom):
         super().__init__(nom, prenom)
 
@@ -28,16 +27,3 @@ class Junior(Utilisateur):
     #Polymorphisme, on augmente la méthode:
     def __str__(self):
         return super().__str__() + ' (Junior)'
-
-paul = Junior("Paul", "Durand")
-arthur = Utilisateur("Jean", "Marleau")
-
-print(arthur)
-print(paul)
-
-print('---------------')
-
-print('Projets accessible à paul :')
-paul.afficher_projets()
-print('Projets accessible à arthur :')
-arthur.afficher_projets()
