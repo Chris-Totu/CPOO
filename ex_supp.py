@@ -38,7 +38,7 @@ def salaire_par_ville(liste_employes, liste_villes, dict_taux_change):
             elif ville == 'Shanghai':
                 taux = dict_taux_change['CNY']
     
-            salaire_ville[ville] = salaire_ville[ville] * taux
+            salaire_ville[ville] *= taux
         
         return salaire_ville
 
@@ -56,12 +56,11 @@ def employes_par_societe(liste_employes):
     for employe in liste_employes:
         societe = employe[7]
         pays = employe[5]
-        if societe in employes_societes.keys():
-            if pays not in employes_societes[societe][1]:       # Si le pays n'est pas encore présent dans la liste:
-                employes_societes[societe][0] += 1              #       Ajouter une personne dans la société
-                employes_societes[societe][1].append(pays)      #       Ajouter le pays de la société
-            else:                                               # Sinon :
-                employes_societes[societe][0] += 1              #       Ajouter une personne dans la société
+        if pays not in employes_societes[societe][1]:       # Si le pays n'est pas encore présent dans la liste:
+            employes_societes[societe][0] += 1              #       Ajouter une personne dans la société
+            employes_societes[societe][1].append(pays)      #       Ajouter le pays de la société
+        else:                                               # Sinon :
+            employes_societes[societe][0] += 1              #       Ajouter une personne dans la société
 
     return employes_societes
 
