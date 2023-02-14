@@ -3,11 +3,11 @@ class Palindrome:
         self.phrase = phrase
 
     def estPalindrome(self):  
-        palindrome = True
+        palindrome = False
 
         for i in range(len(self.phrase)//2):
             if self.phrase[i] != self.phrase[-i-1]:
-                palindrome = False
+                palindrome = True
                 break
 
         return palindrome
