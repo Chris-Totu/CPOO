@@ -3,11 +3,7 @@ class Palindrome:
         self.phrase = phrase
 
     def estPalindrome(self):  
-        palindrome = False
-
-        for i in range(len(self.phrase)//2):
-            if self.phrase[i] != self.phrase[-i-1]:
-                palindrome = True
-                break
-
-        return palindrome
+        # Convertit la phrase en minuscules et supprime les espaces
+        phrase = self.phrase.lower() 
+        # Vérifie si la phrase est égale à elle-même inversée et imprime True ou False
+        return phrase == phrase[::-1] 
