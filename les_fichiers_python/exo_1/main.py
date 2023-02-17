@@ -1,3 +1,7 @@
+## Ecrire un programme permettant de lire les données stockées dans
+## un fichier et les copier dans un autre fichier
+
+
 import os
 
 def main():
