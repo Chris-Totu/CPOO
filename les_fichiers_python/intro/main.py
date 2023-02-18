@@ -9,7 +9,7 @@ def main():
     print(chemin_fichier)
     print(current)
     #Le programme va s'arreter à cette ligne avec 'pdb.set_trace'
-    #pdb.set_trace
+    #pdb.set_trace()
     
     ## Ouverture du fichier en mode lecture ##
     #mon_doc = open(chemin_fichier, "r") # -> ne fonctionne pas, aucune idée pq

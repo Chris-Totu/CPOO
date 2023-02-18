@@ -1,2 +1,4 @@
-{'first_name': 'ze', 'last_name': 'ze', 'profession': 'zeze'}
-{'first_name': 'ty', 'last_name': 'ty', 'profession': 'tyty'}
+{'first_name': 'chris', 'last_name': 'hody', 'profession': 'etudiant'}
+{'first_name': 'e', 'last_name': 'ee', 'profession': 'eee'}
+{'first_name': 'zi', 'last_name': 'zo', 'profession': 'zu'}
+{'first_name': 'Fab', 'last_name': 'reg', 'profession': 'electro'}
