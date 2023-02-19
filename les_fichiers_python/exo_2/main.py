@@ -7,9 +7,8 @@
 import os
 from ast import literal_eval #convertir une chaîne de caractères qui représente un objet Python, tel qu'un dictionnaire ou une liste, en l'objet Python correspondant. 
 import pdb
-DELETE = -1
-REWRITE = True
-NOTHING = False
+DELETE = True
+REWRITE = False
 
 # Demande les datas de la personne et return un dictionnaire sous forme d'un string
 def register():
@@ -55,11 +54,11 @@ def ask_change_data():
     while True:
         choice = input("Voulez-vous changer vos données ? (changer/supprimer/rien) ").lower()
         if choice == "changer":
-            return True
-        elif choice == "rien":
             return False
-        elif choice == "supprimer":
+        elif choice == "rien":
             return -1
+        elif choice == "supprimer":
+            return True
         else:
             print("Votre choix est incorrect. Veuillez entrer 'changer', 'supprimer' ou 'rien'.")
             continue
