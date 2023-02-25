@@ -27,7 +27,7 @@ def add_in_file(person):
     with open(current, 'a') as f:
         f.write(person + '\n') # \n pour qu'à la prochaine écriture ca aille à la ligne
 
-# Renvoie true si la personne est présente dans le fichiers, false sinon 
+# Renvoie true si la personne est présente dans le fichiers, false sinon
 def is_present(person):
     
     isPresent = False
@@ -82,7 +82,8 @@ def delete_person(person):
             f.write(line)
     
     print("Vous avez été supprimé du fichier.")
-    
+
+# Demande les nouvelles données d'une personne et les remplaces dans le fichier    
 def change_data(person):
     current = os.getcwd()
     current += "/les_fichiers_python/exo_2/data.txt"
