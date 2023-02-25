@@ -23,7 +23,6 @@ def register():
 def add_in_file(person):
     current = os.getcwd()
     current += "/les_fichiers_python/exo_2/data.txt"
-    print(current)
     with open(current, 'a') as f:
         f.write(person + '\n') # \n pour qu'à la prochaine écriture ca aille à la ligne
 
