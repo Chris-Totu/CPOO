@@ -10,25 +10,31 @@ import pdb
 DELETE = True
 REWRITE = False
 
-# Demande les datas de la personne et return un dictionnaire sous forme d'un string
 def register():
+    """
+    Demande les datas de la personne et return un dictionnaire sous forme d'un string
+    """
     person = {'first_name' : '', 'last_name' : '', 'profession' : ''}
     person['first_name'] = input("Entrez votre nom : ")
     person['last_name'] = input("Entrez votre prénom : ")
     person['profession'] = input("Entrez votre profession : ")
-
+    
     return str(person)
 
-# Ajoute les datas d'une personne dans le fichiers data.txt
 def add_in_file(person):
+    """
+    Ajoute les datas d'une personne dans le fichiers data.txt
+    """
     current = os.getcwd()
     current += "/les_fichiers_python/exo_2/data.txt"
     with open(current, 'a') as f:
         f.write(person + '\n') # \n pour qu'à la prochaine écriture ca aille à la ligne
 
-# Renvoie true si la personne est présente dans le fichiers, false sinon
+
 def is_present(person):
-    
+    """
+    Renvoie true si la personne est présente dans le fichiers, false sinon
+    """
     isPresent = False
     current = os.getcwd()
     current += "/les_fichiers_python/exo_2/data.txt"
@@ -45,11 +51,14 @@ def is_present(person):
 
     return isPresent
 
-#Fonction qui demande à l'utilisateur si il veut changer ses données
-# Renvoie false si l'utilisateur ne veut rien faire
-# Renvoie true si l'utilisateur veut réencoder ses données
-# Renvoie -1 si l'utilisateur veut supprimer ses données
+
 def ask_change_data():
+    """
+    # Fonction qui demande à l'utilisateur si il veut changer ses données
+    #   Renvoie false si l'utilisateur ne veut rien faire
+    #   Renvoie true si l'utilisateur veut réencoder ses données
+    #   Renvoie -1 si l'utilisateur veut supprimer ses données
+    """
     while True:
         choice = input("Voulez-vous changer vos données ? (changer/supprimer/rien) ").lower()
         if choice == "changer":
@@ -61,9 +70,11 @@ def ask_change_data():
         else:
             print("Votre choix est incorrect. Veuillez entrer 'changer', 'supprimer' ou 'rien'.")
             continue
-
-# Supprime la personne des datas
+ 
 def delete_person(person):
+    """
+    Supprime la personne des datas
+    """
     current = os.getcwd()
     current += "/les_fichiers_python/exo_2/data.txt"
     person = literal_eval(person)
@@ -82,8 +93,11 @@ def delete_person(person):
     
     print("Vous avez été supprimé du fichier.")
 
-# Demande les nouvelles données d'une personne et les remplaces dans le fichier    
+    
 def change_data(person):
+    """
+    Demande les nouvelles données d'une personne et les remplaces dans le fichier
+    """
     current = os.getcwd()
     current += "/les_fichiers_python/exo_2/data.txt"
     person = literal_eval(person)

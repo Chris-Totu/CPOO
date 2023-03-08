@@ -2,7 +2,6 @@
 # 2. Permettre à un utilisateur de rechercher le nom d’une localité sur base du code postal fourni.
 # 3. Le programme devra dire quel est le top 4 des localités les plus recherchés.
 
-# -> DEMANDER POUR LE add_locality() SI CEST LA BONNE METHODE ET COMMENT FAIRE SI LE FICHIER N'A PAS DE \n AU PREALABLE PCQ SI Y A PAS CA CONCATENE AVEC LA DERNIERE LIGNE
 # -> DEMANDER POUR LE top4_frequent_localities_research() POURQUOI IL NY A QUE LA PREMIERE VILLE QUI S AJOUTE DANS LA LISTE 
 
 import os 
@@ -14,7 +13,7 @@ def display_file():
     file_path += "/les_fichiers_python/fichiers_csv/exo_1/locality.csv" # Obtenir le chemin du fichier
     with open(file_path, "r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
-        line_count = 0
+        line_count = 0 
         for row in csv_reader:
             if line_count == 0:
                 line_count += 1
@@ -39,8 +38,12 @@ def add_locality():
         writer = csv.writer(csv_file) #création d'un objet writer pour écrire dans le fichier
         writer.writerow(locality) #ajout de la ligne
 
-# Renvoie le nom de la localité si le code est présent, sinon "Aucune localité trouvée avec le code postal xxxx"
 def search_locality_code():
+    """
+    Renvoie le nom de la localité si le code est présent,
+    sinon "Aucune localité trouvée avec le code postal xxxx"
+    
+    """
     file_path = os.getcwd() # récupérer le chemin absolu du répertoire de travail courant
     file_path += "/les_fichiers_python/fichiers_csv/exo_1/locality.csv" # Obtenir le chemin du fichier
 
@@ -63,15 +66,18 @@ def add_research_locality(locality_code):
         writer.writerow([locality_code])
 
 def top4_frequent_localities_research():
-    ## trouver le top 4 des localités ##
+    """
+    Trouver le top 4 des localités
+    """
     localities_research_path = os.getcwd()
     localities_research_path += "/les_fichiers_python/fichiers_csv/exo_1/localities_research.csv"
     with open(localities_research_path, "r") as csv_file:
         reader = csv.reader(csv_file)
-        lines = [line[0] for line in reader] #lire tout les lignes et les stocker dans une liste.
+        lines = [line[0] for line in reader] #lire toutes les lignes et les stocker dans une liste.
     
     counter = Counter(lines) #compter le nombre d'occurence dans la liste.
     top_4 = [x[0] for x in counter.most_common(4)] #obtenir une liste des 4 codes les plus présent.
+    
     ## Afficher les 4 villes les plus recherchées ##
     locality_path = os.getcwd()
     locality_path += "/les_fichiers_python/fichiers_csv/exo_1/locality.csv"

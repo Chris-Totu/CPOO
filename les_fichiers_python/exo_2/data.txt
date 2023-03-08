@@ -2,3 +2,4 @@
 {'first_name': 'e', 'last_name': 'ee', 'profession': 'eee'}
 {'first_name': 'zi', 'last_name': 'zo', 'profession': 'zu'}
 {'first_name': 'Fab', 'last_name': 'reg', 'profession': 'electro'}
+{'first_name': 'oui', 'last_name': 'oui', 'profession': 'non'}
